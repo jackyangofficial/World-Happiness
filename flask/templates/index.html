@@ -1,17 +1,107 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CIS9650 Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+  .aimg {
+    height: 200px;
+    background: #aaa;
+  }
+
+  .jumbotron {
+    padding: 40px 20px 20px 40px;
+    height: 200px;
+    margin-left: 100px;
+    margin-right:100px;
+  }
+
+  .jumbotronf {
+    padding: 40px 20px 20px 40px;
+    height: 100px;
+  }
+
+  .container {
+    width: max-content;
+    background-color: #f8f9fa;
+  }
+
+  footer {
+    margin-top: 40px;
+  }
+
+  .navbtn {
+    margin-left: 20px;
+  }
+
+  nav.navbar.navbar-expand-sm.bg-dark.navbar-dark.center {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+
+  }
+
+  </style>
+</head>
 <body>
-    <h1>Passport Index</h1>
-    <p>Enter the name of the country:</p>
-    <form method="POST">
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>World Happiness :)</h1>
+  <h5>- Python -</h5>
+  <h6>Invest in a New Citizenship Today</h6> 
+  <img scr="http://www.givejoy.me/wp-content/uploads/2015/05/global-smiley-face.png" alt="img" >
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark center">
+
+  <form class="navbtn" action="/map" method="get">
+    <button type="submit" formmethod="post">World Travel Freedom Map</button>
+  </form>
+
+  <form class="navbtn" action="/dashboard" method="get">
+    <button type="submit" formmethod="post">Dashboard</button>
+  </form>
+
+</nav>
+
+<div class="container" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-4">
+      <h1>Passport Index</h1>
+      <p>Enter the name of the country:</p>
+      <form method="POST">
         <input name="country">
         <input type="submit">
-    </form>
-    <p>Country: {{ variable1 }}</p>
-    <p>Passport Index: {{ variable2 }}</p>
-    <p>Travel Freedom Score: {{ variable3 }}</p>
-    <p>Rank: {{ variable4 }}</p>
-    <p>Country that has highest freedom score: {{ variable5a }} | Rank: {{ variable5b }}</p>
-    <p>Country that has lowest freedom score:: {{ variable6a }} | Rank: {{ variable6b }}</p>
-    <a href="visas.html">Click to View Visa Requirements</a> 
+      </form>
+      <p>Country: {{ variable1 }}</p>
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-5">
+    <h6>Country: </h6><p>{{ variable1 }}</p>
+    <h6>Passport Index: </h6></p>{{ variable2 }}</p>
+    <h6>Travel Freedom Score: </h6></p>{{ variable3 }}</p>
+    <h6>Rank: </h6></p>{{ variable4 }}</p>
+    </div>
+    <div class="col-sm-3">
+      <h6>Country that has highest freedom score: </h6></p>{{ variable5a }} <h6>| Rank: </h6><p>{{ variable5b }}</p>
+      <h6>Country that has lowest freedom score:: </h6></p>{{ variable6a }} <h6>| Rank: </h6><p>{{ variable6b }}</p>
+      <div>{{ variable8}}</div>
+
+    </div>
+  </div>
+</div>
+
 </body>
+
+<footer>
+<div class="jumbotron jumbotronf text-center" style="margin-bottom:0">
+  <p>Baruch CIS9650 Copy Right 2019</p>
+</div>
+</footer>
+
 </html>
