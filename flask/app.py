@@ -235,6 +235,10 @@ def worldmap():
 def visual2():
     return render_template('VISUAL2.html')
 
+@app.route('/mapline', methods=['GET', 'POST'])
+def visual3():
+    return render_template('mapline.html')
+
 
 
 

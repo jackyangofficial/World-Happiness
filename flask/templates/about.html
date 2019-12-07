@@ -83,27 +83,46 @@
   <div class="row">
     <div class="col-sm-12"><br>
       <h1 class="center">About Us</h1>
-      <p class="center">Whether the reasons are economic, political, or recreational, globalization has made migration between countries more accessible than ever before. ​
-      ​
-      Say you are an individual looking to relocate to another country. What would you want to know? What factors will help to make the decision to relocate, and where?
+      <p class="center">Whether the reasons are economic, political, or recreational, globalization has made migration between countries more accessible than ever before. Say you are an individual looking to relocate to another country. What would you want to know? What factors will help to make the decision to relocate, and where? There are many resources already available that discuss commonly known information about countries, such as Gross Domestic Product, unusual or uniquely oppressive local laws, and current state of the government. What is not usually represented is other relevant information about conditions on the ground. Are people happy there? Is the population growing? Is it a place with a lot of people already? Is it peaceful? Our project sets out to supply that information and an analysis of whether it is a good idea for the user to migrate from one country to another based on these factors. 
       </p>
       <hr>
 
       <h2 class="center">Datasets</h1>
 
       <div class="center"><a href='https://raw.githubusercontent.com/jackjoeng/CIS9650-JACK/master/whi.csv'>World Happiness Data</a></div>
+      <p class="center">This came from the World Happiness Report, a global initiative to evaluate and rank the Happiness of each country in the world. </p>
       <div class="center"><a href="https://raw.githubusercontent.com/jackjoeng/CIS9650-JACK/master/passport-index-matrix.csv">Passport Index Data</a></div>
+      <p class="center">This data was compiled from passportindex.org, a site which collects and displays data regarding travel rules between countries. </p>
       <div class="center"><a href="https://raw.githubusercontent.com/jackjoeng/CIS9650-JACK/master/crisis.csv">Crisis Data</a></div>
-        <hr>
+      <p class="center">This data is an excerpt of a much larger database on global conflicts that is updated regularly. It is sourced from The Armd Conflict Location & Event Data Project (ACLED). That is a project to aggregated and conflict events, analysis and mapping.</p>
+      <div class="center"><a href="https://raw.githubusercontent.com/jackjoeng/CIS9650-JACK/master/data.csv">World Population Data</a></div>
+      <p class="center">This data is from a website called World Population Review, which aggregates and displays data originally sourced from the United Nations report on World Population Prospects.</p>
+         
+      <hr>
       <h2 class="center">Technologies</h1><br>
-        <h4 class="center">Flask - Front End Framework</h4>
-        <h4 class="center">Python Anywhere - Webserver</h4>
+        <h4 class="center">Flask</h4>
+        <p class="center">Front End Framework</p>
+        <h4 class="center">Python Anywhere</h4>
+        <p class="center">Webserver that runs Flask App</p>
         <hr>
 
       <h2 class="center">Libraries</h1><br>
         <h5 class="center">Plotly</h5>
+        <p class="center">Graphing library</p>
         <h5 class="center">Pandas</h5>
-        <h5 class="center">Math</h5><br><br>
+        <p class="center">Data manipulation and analysis</p>
+        <h5 class="center">Math</h5>
+        <p class="center">Mathematical functions</p><br>
+        <hr>
+
+        <h2 class="center">Types of Analysis:</h1><br>
+          <p class="center">To begin, we calculate a freedom score for each country based on travel restrictions between it and each other country in the data set. We ordinate the different conditions placed on travel and calculate the score from those. For example, a country offering another country Free Visas may count as a 3, or the highest rank of freedom between the two countries, while a 0 may represent completely restricted travel, regardless of presented documents. Following that, we ranked the countries based on the calculated score.
+            The freedom score and ranking became the index against all of our other data sets were referenced, using the names of countries as the criteria. We did comparison between referenced values from other data sets, such as the World Happiness Data and World Population Data, to generate summary statistics of the differences between living conditions in those countries. We then evaluate the average magnitude of the difference to come up with a standard recommendation about whether or not a person should move from one place to the other.
+            To conclude, we aggregated crisis data about the target country to present a summary statistic regarding it.</p>
+            <br><br>
+
+      
+
           
       
 

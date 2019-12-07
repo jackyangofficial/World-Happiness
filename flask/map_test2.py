@@ -50,6 +50,7 @@ dfnew = df.merge(countriescode, on="Passport",how="inner").fillna(0)
 from plotly.offline import plot
 
 import plotly.graph_objects as go;
+import pandas as pd
 
 coorddf =pd.read_csv('https://raw.githubusercontent.com/wgygabriel/wgy/9d4ee2ceb25591696522f706d56402f5cf3c1281/coordforcountry.csv')
 coorddf = coorddf.set_index("country")
@@ -57,15 +58,15 @@ coorddf = coorddf.set_index("country")
 
 coorddf.head()
 
-country = "Brazil"
-country2= "China"
+country = "China"
+country2= "Syria"
 
 
 fig = go.Figure(data=go.Scattergeo(
     lat = [coorddf.at[country,'latitude'], coorddf.at[country2,'latitude'] ],
     lon = [coorddf.at[country,'longitude'], coorddf.at[country2,'longitude'] ],
     text = [country, country2],
-    mode = 'lines',
+    mode = 'lines+markers',
     line = dict(width = 1.5, color = 'red'),
 
     
