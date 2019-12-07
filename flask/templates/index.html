@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>CIS9650 Project</title>
+  <title>World Happiness</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -9,16 +9,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <style>
-  .aimg {
-    height: 200px;
-    background: #aaa;
+
+  body {
+    background-image:url("http://getwallpapers.com/wallpaper/full/3/7/b/150787.jpg");
+   }
+  .img {
+    opacity: 0.8;
   }
 
   .jumbotron {
     padding: 40px 20px 20px 40px;
-    height: 200px;
+    height: 400px;
     margin-left: 100px;
     margin-right:100px;
+    opacity: 0.7;
   }
 
   .jumbotronf {
@@ -29,10 +33,13 @@
   .container {
     width: max-content;
     background-color: #f8f9fa;
+    opacity: 0.9;
   }
 
   footer {
     margin-top: 40px;
+    margin-bottom: 20px;
+    opacity: 0.9;
   }
 
   .navbtn {
@@ -43,7 +50,18 @@
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 50px;
+    opacity: 0.9;
 
+  }
+
+  .center {
+  text-align: center;
+  }
+
+  .imgcenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   }
 
   </style>
@@ -52,55 +70,79 @@
 
 <div class="jumbotron text-center" style="margin-bottom:0">
   <h1>World Happiness :)</h1>
-  <h5>- Python -</h5>
   <h6>Invest in a New Citizenship Today</h6> 
-  <img scr="http://www.givejoy.me/wp-content/uploads/2015/05/global-smiley-face.png" alt="img" >
+  <img src="http://www.givejoy.me/wp-content/uploads/2015/05/global-smiley-face.png" alt="img" height="200" width="200">
+  <br><br>
+  <h5>- Web App Written in Python -</h5>
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark center">
+
+  <form class="navbtn" action="/about" method="get">
+    <button type="submit" formmethod="post">About</button>
+  </form>
 
   <form class="navbtn" action="/map" method="get">
     <button type="submit" formmethod="post">World Travel Freedom Map</button>
   </form>
 
-  <form class="navbtn" action="/dashboard" method="get">
-    <button type="submit" formmethod="post">Dashboard</button>
+  <form class="navbtn" action="/VISUAL2" method="get">
+    <button type="submit" formmethod="post">Happiness Vs Freedom - Linear Regression</button>
   </form>
 
 </nav>
 
 <div class="container" style="margin-top:30px">
-  <div class="row">
-    <div class="col-sm-4">
-      <h1>Passport Index</h1>
-      <p>Enter the name of the country:</p>
-      <form method="POST">
-        <input name="country">
-        <input type="submit">
-      </form>
-      <p>Country: {{ variable1 }}</p>
-      <hr class="d-sm-none">
-    </div>
-    <div class="col-sm-5">
-    <h6>Country: </h6><p>{{ variable1 }}</p>
-    <h6>Passport Index: </h6></p>{{ variable2 }}</p>
-    <h6>Travel Freedom Score: </h6></p>{{ variable3 }}</p>
-    <h6>Rank: </h6></p>{{ variable4 }}</p>
-    </div>
-    <div class="col-sm-3">
-      <h6>Country that has highest freedom score: </h6></p>{{ variable5a }} <h6>| Rank: </h6><p>{{ variable5b }}</p>
-      <h6>Country that has lowest freedom score:: </h6></p>{{ variable6a }} <h6>| Rank: </h6><p>{{ variable6b }}</p>
-      <div>{{ variable8}}</div>
 
+  <div class="row">
+      <div class="col-sm-12">
+        <h1 class="center">Freedom Score & Rank </h1>
+        <h5 class="center">(Based on Passport Index)</h5>
+        <img class="imgcenter" src="https://st.depositphotos.com/1001911/2477/v/450/depositphotos_24779959-stock-illustration-dreamy-emoticon.jpg" alt="img" height="120" width="140"><br>
+        <p class="center">Enter the name of the country:</p>
+        <form method="POST" class="center">
+          <input name="country" class="center">
+          <input type="submit" class="center">
+        </form><br><br>
+        <hr class="d-sm-none">
+      </div>
     </div>
-  </div>
+  
+    <div class="row">
+      <div class="col-sm-12">
+        <h5 class="center">Country: </h6>
+        <p class="center">{{ variable1 }}</p>
+        <h5 class="center">Passport Index: </h6>
+        <p class="center">{{ variable2 }}</p>
+        <h5 class="center">Travel Freedom Score: </h6>
+        <p class="center">{{ variable3 }}</p>
+        <h5 class="center">Rank: </h6>
+        <p class="center">{{ variable4 }}</p>
+      </div>
+    </div><hr>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h6 class="center">Country that has highest freedom score: </h6>
+        <p class="center">{{ variable5a }}</p> 
+        <h6 class="center">| Rank: </h6>
+        <p class="center">{{ variable5b }}</p>
+        <h6 class="center">Country that has lowest freedom score:: </h6>
+        <p class="center">{{ variable6a }}</p> 
+        <h6 class="center">| Rank: </h6>
+        <p class="center">{{ variable6b }}</p>
+        <div class="center">{{ variable8}}</div>
+      </div>
+    </div>
+
 </div>
+    
 
 </body>
 
 <footer>
-<div class="jumbotron jumbotronf text-center" style="margin-bottom:0">
-  <p>Baruch CIS9650 Copy Right 2019</p>
+<div class="jumbotron jumbotronf center" style="margin-bottom:0">
+  <p>Jack, Shane, Thomas, Gabriel, Michael - Baruch CIS9650 Copy Right 2019</p>
 </div>
 </footer>
 

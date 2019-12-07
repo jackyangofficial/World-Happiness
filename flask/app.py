@@ -10,9 +10,6 @@ from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
-@app.route('/demo')
-def demo():
-    return render_template('demo.html')
 
 @app.route('/')
 def home():
@@ -105,9 +102,19 @@ def visas():
     return render_template('visas.html')                          
 '''
 
+@app.route('/about', methods=['GET', 'POST'])
+def aboutpage():
+    return render_template('about.html')
+
 @app.route('/map', methods=['GET', 'POST'])
-def map():
-    return render_template('temp-plot.html')
+def worldmap():
+    return render_template('map.html')
+
+@app.route('/VISUAL2', methods=['GET', 'POST'])
+def visual2():
+    return render_template('VISUAL2.html')
+
+
 
 
 if __name__ == '__main__':
