@@ -105,6 +105,8 @@ def index():
     growthmsg = ""
     densdiffmsg = ""
     happydiffmsg = ""
+    resultmsg1 = ""
+    resultmsg2 = ""
     
     if score_diff < 0:
         scoremsg = "You will be in a country with weaker international relationships."
@@ -142,29 +144,18 @@ def index():
     else:
         happydiffmsg = "You can expect to be a bit happier, the country you moving to has a higher World Happiness score."
         
+    if average_per(x,y)>.05:
+        resultmsg1 = "Good for you. There seem to be some fairly substantial benefits."
+    elif average_per(x,y) == 0:
+        resultmsg1 = "literally the same. You picked the same country. What did you think was going to happen?" 
+    else:
+        resultmsg1 = "bad for you. The benefits may not be worth making the move."
         
-        #print(x)
-        #print(y)
-        #print(origin,": ",countrydata.at[origin,"GrowthRate"])
-        #print(destination,": ",countrydata.at[destination,"GrowthRate"])
-        print("\n")
-        print("Ultimately, based on factors such as Happiness, Growth, Population Density, Travel Freedom, and others, we predict that moving from",origin,"to",destination,"may end up being...")
-        if average_per(x,y)>.05:
-            print("good for you. There seem to be some fairly substantial benefits.")
-        elif average_per(x,y) == 0:
-            print("literally the same. You picked the same country. What did you think was going to happen?" )
-        else:
-            print("bad for you. The benefits may not be worth making the move.")
-        
-        
-        print("However, statistics aren't everything. Some things are more important than World Happiness or GDP.")
-        print("In the last month, there have been", df3[df3.country == destination].shape[0], "acts of violence in the country you're considering moving to. These include riots, protests, explosions and battles.")
-        if df3[df3.country == destination].shape[0] < 10:
-            print("Actually, that's pretty low. Maybe you'll be fine.")
-        if df3[df3.country == destination].shape[0] == 0:
-            print("Wait, 0? That can't be right. FAKE NEWS!!!")
-        print("")
-        print("-----------------------------------")
+    if df3[df3.country == destination].shape[0] < 10:
+        resultmsg2 = "Actually, that's pretty low. Maybe you'll be fine."
+    if df3[df3.country == destination].shape[0] == 0:
+        resultmsg2 = "Wait, 0? That can't be right. FAKE NEWS!!!"
+
     '''
     ## Rank country by its freedom score
     df_rank_max = df.nlargest(1, "Rank").iloc[0]
@@ -188,6 +179,7 @@ def index():
     text_file.write(df_country1.to_html())
     text_file.close()
     '''
+
     
     return render_template('index.html', v1 = origin,
                                      v1a = df[origin].value_counts().to_frame(),
@@ -213,7 +205,11 @@ def index():
                                      v4b = scoremsg,
                                      v4c = growthmsg,
                                      v4d = densdiffmsg,
-                                     v4e = happydiffmsg
+                                     v4e = happydiffmsg,
+                                     
+                                     v5 = resultmsg1,
+                                     v5b = df3[df3.country == destination].shape[0],
+                                     v5c = resultmsg2
                                     
                                      )
     
