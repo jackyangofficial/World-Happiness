@@ -64,6 +64,7 @@
   margin-right: auto;
   }
 
+
   </style>
 </head>
 <body>
@@ -101,7 +102,8 @@
         <img class="imgcenter" src="https://st.depositphotos.com/1001911/2477/v/450/depositphotos_24779959-stock-illustration-dreamy-emoticon.jpg" alt="img" height="120" width="140"><br>
         <p class="center">Enter the name of the country:</p>
         <form method="POST" class="center">
-          <input name="country" class="center">
+          <input name="country1" class="center" value="United States">
+          <input name="country2" class="center" value="Canada">
           <input type="submit" class="center">
         </form><br><br>
         <hr class="d-sm-none">
@@ -110,30 +112,57 @@
   
     <div class="row">
       <div class="col-sm-12">
-        <h5 class="center">Country: </h6>
-        <p class="center">{{ variable1 }}</p>
-        <h5 class="center">Passport Index: </h6>
-        <p class="center">{{ variable2 }}</p>
+        <h4 class="center">Country: </h4>
+        <h5 class="center">{{ v1 }}</h5>
+        <p class="center">Here's some data about the country that you're leaving data:</p>
+        <p class="center">International relationships by way of travel rules</p>
+        <h6 class="center">{{ v1a }}</h6>
         <h5 class="center">Travel Freedom Score: </h6>
-        <p class="center">{{ variable3 }}</p>
-        <h5 class="center">Rank: </h6>
-        <p class="center">{{ variable4 }}</p>
+        <p class="center">{{ v1b }}</p>
+        <h5 class="center">Travel Freedom Rank: </h6>
+        <p class="center">{{ v1c }}</p>
+        <h5 class="center">Growth Rate: </h6>
+        <p class="center">{{ v1d }}</p>
       </div>
     </div><hr>
 
     <div class="row">
       <div class="col-sm-12">
-        <h6 class="center">Country that has highest freedom score: </h6>
-        <p class="center">{{ variable5a }}</p> 
-        <h6 class="center">| Rank: </h6>
-        <p class="center">{{ variable5b }}</p>
-        <h6 class="center">Country that has lowest freedom score:: </h6>
-        <p class="center">{{ variable6a }}</p> 
-        <h6 class="center">| Rank: </h6>
-        <p class="center">{{ variable6b }}</p>
-        <div class="center">{{ variable8}}</div>
+        <h4 class="center">Country: </h4>
+        <h5 class="center">{{ v2 }}</h5>
+        <p class="center">Here's some data about the country that you're leaving data:</p>
+        <p class="center">International relationships by way of travel rules</p>
+        <h6 class="center">{{ v2a }}</h6>
+        <h5 class="center">Travel Freedom Score: </h6>
+        <p class="center">{{ v2b }}</p>
+        <h5 class="center">Travel Freedom Rank: </h6>
+        <p class="center">{{ v2c }}</p>
+        <h5 class="center">Population Growth Rate: </h6>
+        <p class="center">{{ v2d }}</p>
       </div>
-    </div>
+    </div><hr>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h5 class="center">Moving from {{ v3 }} to {{ v3a }} will have the following impacts:</h6><br>
+        <p class="center">Your Freedom score will change by (Positive=Increase, Negative=Decrease)</p>
+        <h4 class="center">{{ v3b }}</h4>
+        <p class="center">{{ v4b }}</p><hr><br><br>
+
+        <p class="center">Population growth rate will change by (Positive=Increase, Negative=Decrease)</p>
+        <h4 class="center">{{ v3c }}</h4>
+        <p class="center">{{ v4c }}</p><hr><br><br>
+
+        <p class="center">Population density will change by (Positive=Increase, Negative=Decrease)</p>
+        <h4 class="center">{{ v3d }}</h4>
+        <p class="center">{{ v4d }}</p><hr><br><br>
+
+        <p class="center">Happiness Rate will change by (Positive=Increase, Negative=Decrease)</p>
+        <h4 class="center">{{ v3e }}</h4>
+        <p class="center">{{ v4e }}</p>
+
+      </div>
+    </div><hr>
 
 </div>
     
@@ -142,7 +171,7 @@
 
 <footer>
 <div class="jumbotron jumbotronf center" style="margin-bottom:0">
-  <p>Jack, Shane, Thomas, Gabriel, Michael - Baruch CIS9650 Copy Right 2019</p>
+  <h5>Jack, Shane, Thomas, Gabriel, Michael - Baruch CIS9650 Copy Right 2019</h5>
 </div>
 </footer>
 
