@@ -1,6 +1,6 @@
 # CIS9650-ProjectDemo
 
-![Logo](/image/logo.png =250x250)
+![Logo](/image/logo.png | width=100)
 
 ## World Happiness is a web app created using Flask and written in python
 
