@@ -37,7 +37,8 @@ The freedom score and ranking became the index against all of our other data set
 
 To conclude, we aggregated crisis data about the target country to present a summary statistic regarding it.
 
-**Running the App in Local**
+**Running the App in Local:**
+
 
 1. Git clone the repository 
 
@@ -58,4 +59,5 @@ http://127.0.0.1:5000/
 ```
 
 
+Baruch College CIS9650 Copy Right 2019
 
