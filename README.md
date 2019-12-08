@@ -69,7 +69,11 @@ http://127.0.0.1:5000/
 
 ![img5](/image/img5.png)
 ![img6](/image/img6.png)
+
+**Travel Freedom Map**
 ![img7](/image/img7.png)
+
+**Linear Regression Graph**
 ![img8](/image/img8.png)
 
 ***Team members:***
