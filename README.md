@@ -76,7 +76,9 @@ http://127.0.0.1:5000/
 **Linear Regression Graph**
 ![img8](/image/img8.png)
 
-***Team members:***
+**Team members:**
 Shane Ayers, Michael Ramlochan, Thomas Thomas, Gabriel Whang, Jack Yang
+
+
 ***Baruch College CIS9650 Copy Right 2019***
 https://github.com/JackJoeng/CIS9650-ProjectDemo
