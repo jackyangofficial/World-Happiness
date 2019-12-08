@@ -1,5 +1,9 @@
 # CIS9650-ProjectDemo
 
+*World Happiness is a web app created using Flask and written in python*
+
+*The app is running on Python Anywhere server*
+
 Web App link: http://jackjoeng.pythonanywhere.com/
 
 
