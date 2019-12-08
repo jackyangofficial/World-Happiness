@@ -1,5 +1,7 @@
 # CIS9650-ProjectDemo
 
+![Logo](/image/logo.png =250x250)
+
 ## World Happiness is a web app created using Flask and written in python
 
 ## The app is running on Python Anywhere server
@@ -61,8 +63,6 @@ python app.py
 ```
 http://127.0.0.1:5000/
 ```
-
-![Logo](/image/logo.png)
 
 ***Baruch College CIS9650 Copy Right 2019***
 https://github.com/JackJoeng/CIS9650-ProjectDemo
