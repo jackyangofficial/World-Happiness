@@ -8,10 +8,6 @@
 
 ## Web App link: http://jackjoeng.pythonanywhere.com/
 
-
-**Team members:** 
-Shane Ayers, Michael Ramlochan, Thomas Thomas, Gabriel Whang, Jack Yang
-
 **Problem Statement:**
 
 Whether the reasons are economic, political, or recreational, globalization has made migration between countries more accessible than ever before. Say you are an individual looking to relocate to another country. What would you want to know? What factors will help to make the decision to relocate, and where? There are many resources already available that discuss commonly known information about countries, such as Gross Domestic Product, unusual or uniquely oppressive local laws, and current state of the government. What is not usually represented is other relevant information about conditions on the ground. Are people happy there? Is the population growing? Is it a place with a lot of people already? Is it peaceful? Our project sets out to supply that information and an analysis of whether it is a good idea for the user to migrate from one country to another based on these factors. 
@@ -64,5 +60,19 @@ python app.py
 http://127.0.0.1:5000/
 ```
 
+![img1](/image/img1.png)
+![img2](/image/img2.png)
+
+![img3](/image/img3.png)
+
+![img4](/image/img4.png)
+
+![img5](/image/img5.png)
+![img6](/image/img6.png)
+![img7](/image/img7.png)
+![img8](/image/img8.png)
+
+***Team members:***
+Shane Ayers, Michael Ramlochan, Thomas Thomas, Gabriel Whang, Jack Yang
 ***Baruch College CIS9650 Copy Right 2019***
 https://github.com/JackJoeng/CIS9650-ProjectDemo
