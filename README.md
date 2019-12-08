@@ -48,7 +48,9 @@ $ pip install Flask
 3. Navigate to Flask folder
 
 4. Run:
-``` python app.py
+
+``` 
+python app.py
 ```
 5. Open in your web browser:
 ```
