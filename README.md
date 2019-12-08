@@ -36,3 +36,24 @@ To begin, we calculate a freedom score for each country based on travel restrict
 The freedom score and ranking became the index against all of our other data sets were referenced, using the names of countries as the criteria. We did comparison between referenced values from other data sets, such as the World Happiness Data and World Population Data, to generate summary statistics of the differences between living conditions in those countries. We then evaluate the average magnitude of the difference to come up with a standard recommendation about whether or not a person should move from one place to the other.
 
 To conclude, we aggregated crisis data about the target country to present a summary statistic regarding it.
+
+**Running the App in Local**
+
+1. Git clone the repository 
+
+2. In your terminal, run:
+```
+$ pip install Flask
+```
+3. Navigate to Flask folder
+
+4. Run:
+``` python app.py
+```
+5. Open in your web browser:
+```
+http://127.0.0.1:5000/
+```
+
+
+
